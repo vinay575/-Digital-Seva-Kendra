@@ -17,7 +17,11 @@ const STATS = [
 
 export default function About() {
   return (
-    <section className="section about-section" id="about">
+    <section
+      className="section about-section"
+      id="about"
+      style={{ backgroundImage: `url('${import.meta.env.BASE_URL}about-bg.jpg')` }}
+    >
       <div className="container">
         <SectionHeading title="About Us" />
         <div className="about-grid">

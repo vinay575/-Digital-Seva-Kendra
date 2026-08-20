@@ -48,8 +48,8 @@ export default function Header() {
         <div className="container nav-container">
           <Logo />
           <div className="gov-badges">
-            <img src="/digital-india.png" alt="Digital India" className="gov-logo" />
-            <img src="/mygov.png" alt="MyGov" className="gov-logo my-gov" />
+            <img src={`${import.meta.env.BASE_URL}digital-india.png`} alt="Digital India" className="gov-logo" />
+            <img src={`${import.meta.env.BASE_URL}mygov.png`} alt="MyGov" className="gov-logo my-gov" />
           </div>
           <button className="menu-toggle" onClick={() => setOpen((v) => !v)} aria-label="Toggle navigation">
             <Icon name={open ? 'close' : 'menu'} />

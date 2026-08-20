@@ -76,7 +76,7 @@ export default function Hero() {
                 </div>
               </div>
               <div className="hero-visual">
-                <img src="/tree.png" alt="Digital growth" className="hero-tree" />
+                <img src={`${import.meta.env.BASE_URL}tree.png`} alt="Digital growth" className="hero-tree" />
               </div>
             </div>
           </div>

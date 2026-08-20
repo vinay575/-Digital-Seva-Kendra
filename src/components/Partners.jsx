@@ -25,7 +25,7 @@ export default function Partners() {
           <div className="marquee-track">
             {[...LOGOS, ...LOGOS].map((logo, i) => (
               <div className="partner-logo" key={`${logo}-${i}`}>
-                <img src={`/partners/${logo}.png`} alt={logo} />
+                <img src={`${import.meta.env.BASE_URL}partners/${logo}.png`} alt={logo} />
               </div>
             ))}
           </div>
