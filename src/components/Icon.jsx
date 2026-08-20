@@ -1,0 +1,40 @@
+const ICON_MAP = {
+  university: 'fa-solid fa-building-columns',
+  mobile: 'fa-solid fa-mobile-screen-button',
+  plane: 'fa-solid fa-plane',
+  pencil: 'fa-solid fa-pen-to-square',
+  'file-text': 'fa-solid fa-file-lines',
+  building: 'fa-solid fa-landmark',
+  'id-card': 'fa-solid fa-id-card',
+  handshake: 'fa-solid fa-handshake',
+  store: 'fa-solid fa-store',
+  network: 'fa-solid fa-diagram-project',
+  map: 'fa-solid fa-map-location-dot',
+  chart: 'fa-solid fa-chart-line',
+  rupee: 'fa-solid fa-indian-rupee-sign',
+  'user-plus': 'fa-solid fa-user-plus',
+  shield: 'fa-solid fa-shield-halved',
+  certificate: 'fa-solid fa-award',
+  location: 'fa-solid fa-location-dot',
+  'user-tie': 'fa-solid fa-user-tie',
+  link: 'fa-solid fa-link',
+  check: 'fa-solid fa-circle-check',
+  email: 'fa-solid fa-envelope',
+  lock: 'fa-solid fa-lock',
+  phone: 'fa-solid fa-phone',
+  menu: 'fa-solid fa-bars',
+  close: 'fa-solid fa-xmark',
+  'chevron-left': 'fa-solid fa-chevron-left',
+  'chevron-right': 'fa-solid fa-chevron-right',
+  star: 'fa-solid fa-star',
+  quote: 'fa-solid fa-quote-right',
+  play: 'fa-brands fa-google-play',
+  facebook: 'fa-brands fa-facebook-f',
+  instagram: 'fa-brands fa-instagram',
+  youtube: 'fa-brands fa-youtube',
+  'map-pin': 'fa-solid fa-map-pin'
+}
+
+export default function Icon({ name, className = '' }) {
+  return <i className={`${ICON_MAP[name] || 'fa-solid fa-circle'} ${className}`} aria-hidden="true" />
+}
