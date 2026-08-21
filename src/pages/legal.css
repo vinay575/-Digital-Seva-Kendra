@@ -1,6 +1,6 @@
 /* ============ Legal Page Hero ============ */
 .legal-hero {
-  padding: 120px 0 50px;
+  padding: 50px 0 50px;
   background: var(--navy);
   color: #fff;
 }
@@ -87,7 +87,7 @@
 /* ============ Responsive ============ */
 @media (max-width: 768px) {
   .legal-hero {
-    padding: 100px 0 36px;
+    padding: 40px 0 36px;
   }
 
   .legal-hero h1 {
