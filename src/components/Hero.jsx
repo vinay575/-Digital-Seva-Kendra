@@ -1,4 +1,5 @@
 import { useEffect, useState, useCallback } from 'react'
+import { Link } from 'react-router-dom'
 import Icon from './Icon'
 
 const SLIDES = [
@@ -7,24 +8,24 @@ const SLIDES = [
     title: 'Become a Digital Seva Kendra Partner',
     highlight: 'Earn up to ₹1 Lakh per month',
     text: 'A one-stop solution for banking, bill payments, government registrations and more — trusted across 23+ cities and 1 Lakh+ centres across India.',
-    cta: { icon: 'mobile', label: 'Mobile Recharge', sub: 'Instant • Secure', href: '#services' },
-    cta2: { icon: 'university', label: 'AEPS Banking', sub: 'Cash in / Cash out', href: '#services' }
+    cta: { icon: 'mobile', label: 'Mobile Recharge', sub: 'Instant • Secure', href: '/services' },
+    cta2: { icon: 'university', label: 'AEPS Banking', sub: 'Cash in / Cash out', href: '/services' }
   },
   {
     badge: 'Banking • Recharge • Government Services',
     title: 'All Digital Services at One Place',
     highlight: 'AEPS, Money Transfer & More',
     text: 'Offer 50+ services from your kiosk — from cash deposit and micro ATM to PAN, Voter ID, Passport applications and every government scheme.',
-    cta: { icon: 'id-card', label: 'Govt. Services', sub: 'PAN • Voter • Passport', href: '#services' },
-    cta2: { icon: 'mobile', label: 'Mobile Recharge', sub: 'Instant • Secure', href: '#services' }
+    cta: { icon: 'id-card', label: 'Govt. Services', sub: 'PAN • Voter • Passport', href: '/services' },
+    cta2: { icon: 'mobile', label: 'Mobile Recharge', sub: 'Instant • Secure', href: '/services' }
   },
   {
     badge: 'Join 1,00,000+ Retailers',
     title: 'Start Your Own Digital Kiosk Business',
     highlight: 'Easy Onboarding • 100% Secure',
     text: 'No exam or certificate required. Empowering local entrepreneurs across urban and rural India to grow their own business.',
-    cta: { icon: 'user-plus', label: 'Become a Partner', sub: 'Start Earning Today', href: '#partner' },
-    cta2: { icon: 'mobile', label: 'Mobile Recharge', sub: 'Instant • Secure', href: '#services' }
+    cta: { icon: 'user-plus', label: 'Become a Partner', sub: 'Start Earning Today', href: '/#partner' },
+    cta2: { icon: 'mobile', label: 'Mobile Recharge', sub: 'Instant • Secure', href: '/services' }
   }
 ]
 
@@ -55,7 +56,7 @@ export default function Hero() {
                 <p className="hero-highlight">{slide.highlight}</p>
                 <p className="hero-sub">{slide.text}</p>
                 <div className="hero-actions">
-                  <a href={slide.cta.href} className="btn btn-saffron btn-rich">
+                  <Link to={slide.cta.href} className="btn btn-saffron btn-rich">
                     <span className="btn-rich-icon">
                       <Icon name={slide.cta.icon} />
                     </span>
@@ -63,8 +64,8 @@ export default function Hero() {
                       <strong>{slide.cta.label}</strong>
                       <small>{slide.cta.sub}</small>
                     </span>
-                  </a>
-                  <a href={slide.cta2.href} className="btn btn-outline btn-rich">
+                  </Link>
+                  <Link to={slide.cta2.href} className="btn btn-outline btn-rich">
                     <span className="btn-rich-icon">
                       <Icon name={slide.cta2.icon} />
                     </span>
@@ -72,7 +73,7 @@ export default function Hero() {
                       <strong>{slide.cta2.label}</strong>
                       <small>{slide.cta2.sub}</small>
                     </span>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="hero-visual">

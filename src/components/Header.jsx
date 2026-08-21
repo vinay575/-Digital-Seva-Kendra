@@ -1,23 +1,24 @@
 import { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import Icon from './Icon'
 
 const NAV_LINKS = [
-  { label: 'Home', href: '#home' },
-  { label: 'Services', href: '#services' },
-  { label: 'Blog', href: '#blog' },
-  { label: 'About Us', href: '#about' },
-  { label: 'Contact Us', href: '#contact' }
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services' },
+  { label: 'Blog', href: '/#blog' },
+  { label: 'About Us', href: '/#about' },
+  { label: 'Contact Us', href: '/#contact' }
 ]
 
 function Logo() {
   return (
-    <a className="brand" href="#home">
+    <Link className="brand" to="/">
       <span className="brand-mark">DSK</span>
       <span className="brand-text">
         <strong>Digital Seva</strong>
         <em>Kendra</em>
       </span>
-    </a>
+    </Link>
   )
 }
 
@@ -56,13 +57,13 @@ export default function Header() {
           </button>
           <nav className={`nav-links ${open ? 'open' : ''}`}>
             {NAV_LINKS.map((link) => (
-              <a key={link.label} href={link.href} onClick={() => setOpen(false)}>
+              <Link key={link.label} to={link.href} onClick={() => setOpen(false)}>
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <a href="#register" className="nav-register" onClick={() => setOpen(false)}>
+            <Link to="/#register" className="nav-register" onClick={() => setOpen(false)}>
               Registration Now
-            </a>
+            </Link>
           </nav>
         </div>
       </div>

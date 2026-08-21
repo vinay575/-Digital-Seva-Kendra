@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import { getSiteContent } from './services/siteApi'
 import Header from './components/Header'
 import Hero from './components/Hero'
@@ -13,6 +14,26 @@ import RegisterCTA from './components/RegisterCTA'
 import Testimonials from './components/Testimonials'
 import Partners from './components/Partners'
 import Footer from './components/Footer'
+import ServicesPage from './pages/ServicesPage'
+import ServiceDetailPage from './pages/ServiceDetailPage'
+
+function HomePage({ content }) {
+  return (
+    <main>
+      <Hero />
+      <About />
+      <Services services={content.services} />
+      <Partner stats={content.stats} />
+      <Features />
+      <Advantages />
+      <DigitalBusiness />
+      <DownloadApp />
+      <RegisterCTA />
+      <Testimonials testimonials={content.testimonials} />
+      <Partners partners={content.partners} />
+    </main>
+  )
+}
 
 export default function App() {
   const [content, setContent] = useState({ services: [], testimonials: [], partners: [], stats: [] })
@@ -28,19 +49,11 @@ export default function App() {
   return (
     <div className="site">
       <Header />
-      <main>
-        <Hero />
-        <About />
-        <Services services={content.services} />
-        <Partner stats={content.stats} />
-        <Features />
-        <Advantages />
-        <DigitalBusiness />
-        <DownloadApp />
-        <RegisterCTA />
-        <Testimonials testimonials={content.testimonials} />
-        <Partners partners={content.partners} />
-      </main>
+      <Routes>
+        <Route path="/" element={<HomePage content={content} />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/services/:id" element={<ServiceDetailPage />} />
+      </Routes>
       <Footer />
     </div>
   )

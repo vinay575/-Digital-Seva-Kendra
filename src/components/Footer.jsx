@@ -1,11 +1,12 @@
+import { Link } from 'react-router-dom'
 import Icon from './Icon'
 
 const USEFUL_LINKS = [
-  { label: 'Home', href: '#home' },
-  { label: 'About Us', href: '#about' },
-  { label: 'Contact Us', href: '#contact' },
+  { label: 'Home', href: '/' },
+  { label: 'About Us', href: '/#about' },
+  { label: 'Contact Us', href: '/#contact' },
   { label: 'Login', href: '#login' },
-  { label: 'Registration Now', href: '#register' }
+  { label: 'Registration Now', href: '/#register' }
 ]
 
 const QUICK_LINKS = [
@@ -29,13 +30,13 @@ export default function Footer() {
       <div className="container">
         <div className="footer-top">
           <div className="footer-brand">
-            <a className="brand" href="#home">
+            <Link className="brand" to="/">
               <span className="brand-mark">DSK</span>
               <span className="brand-text">
                 <strong>Digital Seva</strong>
                 <em>Kendra</em>
               </span>
-            </a>
+            </Link>
             <p>
               We at Digital Seva Kendra provide an easy, efficient and long term solution to all your multi-utility
               payment and document needs. We abide by the Digital India norms in the best possible way.
@@ -46,7 +47,7 @@ export default function Footer() {
             <ul>
               {USEFUL_LINKS.map((l) => (
                 <li key={l.label}>
-                  <a href={l.href}>{l.label}</a>
+                  <Link to={l.href}>{l.label}</Link>
                 </li>
               ))}
             </ul>
@@ -66,7 +67,7 @@ export default function Footer() {
             <ul>
               {SERVICE_LINKS.map((s) => (
                 <li key={s}>
-                  <a href="#services">{s}</a>
+                  <Link to="/services">{s}</Link>
                 </li>
               ))}
             </ul>
