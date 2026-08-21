@@ -10,9 +10,9 @@ const USEFUL_LINKS = [
 ]
 
 const QUICK_LINKS = [
-  { label: 'Terms & Conditions', href: '#terms' },
-  { label: 'Privacy Policy', href: '#privacy' },
-  { label: 'Legal Documents', href: '#legal' }
+  { label: 'Terms & Conditions', href: '/terms' },
+  { label: 'Privacy Policy', href: '/privacy' },
+  { label: 'Legal Documents', href: '/legal' }
 ]
 
 const SERVICE_LINKS = [
@@ -57,7 +57,7 @@ export default function Footer() {
             <ul>
               {QUICK_LINKS.map((l) => (
                 <li key={l.label}>
-                  <a href={l.href}>{l.label}</a>
+                  <Link to={l.href}>{l.label}</Link>
                 </li>
               ))}
             </ul>

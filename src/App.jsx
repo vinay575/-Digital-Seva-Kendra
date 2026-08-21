@@ -16,6 +16,7 @@ import Partners from './components/Partners'
 import Footer from './components/Footer'
 import ServicesPage from './pages/ServicesPage'
 import ServiceDetailPage from './pages/ServiceDetailPage'
+import LegalPage from './pages/LegalPage'
 
 function HomePage({ content }) {
   return (
@@ -53,6 +54,9 @@ export default function App() {
         <Route path="/" element={<HomePage content={content} />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/services/:id" element={<ServiceDetailPage />} />
+        <Route path="/terms" element={<LegalPage />} />
+        <Route path="/privacy" element={<LegalPage />} />
+        <Route path="/legal" element={<LegalPage />} />
       </Routes>
       <Footer />
     </div>
