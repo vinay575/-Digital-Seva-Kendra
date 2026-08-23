@@ -32,7 +32,11 @@ const ICON_MAP = {
   facebook: 'fa-brands fa-facebook-f',
   instagram: 'fa-brands fa-instagram',
   youtube: 'fa-brands fa-youtube',
-  'map-pin': 'fa-solid fa-map-pin'
+  'map-pin': 'fa-solid fa-map-pin',
+  calendar: 'fa-solid fa-calendar-days',
+  clock: 'fa-solid fa-clock',
+  user: 'fa-solid fa-user',
+  tag: 'fa-solid fa-tag'
 }
 
 export default function Icon({ name, className = '' }) {

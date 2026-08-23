@@ -4,6 +4,7 @@ import Icon from './Icon'
 const USEFUL_LINKS = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/#about' },
+  { label: 'Blog', href: '/blog' },
   { label: 'Contact Us', href: '/#contact' },
   { label: 'Login', href: '#login' },
   { label: 'Registration Now', href: '/#register' }

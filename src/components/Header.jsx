@@ -5,7 +5,7 @@ import Icon from './Icon'
 const NAV_LINKS = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
-  { label: 'Blog', href: '/#blog' },
+  { label: 'Blog', href: '/blog' },
   { label: 'About Us', href: '/#about' },
   { label: 'Contact Us', href: '/#contact' }
 ]
