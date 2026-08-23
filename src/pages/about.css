@@ -1,0 +1,549 @@
+/* ============ Hero ============ */
+.about-hero {
+  padding: 50px 0 50px;
+  background: var(--navy);
+  color: #fff;
+}
+
+.about-hero .breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  opacity: 0.85;
+}
+
+.about-hero .breadcrumb a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+
+.about-hero .breadcrumb a:hover { opacity: 0.7; }
+
+.about-hero .breadcrumb span { color: rgba(255, 255, 255, 0.6); }
+
+.about-hero-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-hero-center h1 {
+  font-family: var(--font-head);
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.about-hero-sub {
+  font-size: 1rem;
+  color: #cbd5e1;
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+/* ============ Intro (reuses homepage about-section styles) ============ */
+.about-intro {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about-text .section-heading {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.about-text .heading-line {
+  justify-content: flex-start;
+}
+
+.about-text p {
+  color: var(--muted);
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+.about-text strong {
+  color: var(--saffron-dark);
+}
+
+/* ============ Mission & Vision ============ */
+.about-mv {
+  background: #fff;
+}
+
+.about-mv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.about-mv-card {
+  background: #fff;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-mv-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.mv-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 22px;
+  position: relative;
+}
+
+.mv-head::after {
+  content: '';
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.mv-saffron .mv-head {
+  background: linear-gradient(135deg, var(--saffron), var(--saffron-dark));
+}
+
+.mv-green .mv-head {
+  background: linear-gradient(135deg, var(--green), var(--green-dark));
+}
+
+.mv-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-size: 1.15rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  position: relative;
+  z-index: 1;
+}
+
+.mv-head h3 {
+  font-family: var(--font-head);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.mv-body {
+  padding: 20px 22px;
+  border-top: 1px dashed var(--border);
+}
+
+.mv-body p {
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ============ Core Values ============ */
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.value-card {
+  background: #fff;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 30px 22px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.value-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  color: #fff;
+  margin: 0 auto 16px;
+}
+
+.vc-saffron .value-icon {
+  background: linear-gradient(135deg, var(--saffron), var(--saffron-dark));
+  box-shadow: 0 10px 20px -10px rgba(249, 115, 22, 0.55);
+}
+
+.vc-green .value-icon {
+  background: linear-gradient(135deg, var(--green), var(--green-dark));
+  box-shadow: 0 10px 20px -10px rgba(22, 163, 74, 0.55);
+}
+
+.value-card h4 {
+  font-family: var(--font-head);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.value-card p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ============ Why Choose Us ============ */
+.about-why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.why-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+  background: #fff;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.why-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.why-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--saffron), var(--saffron-dark));
+  flex-shrink: 0;
+}
+
+.why-card:nth-child(even) .why-icon {
+  background: linear-gradient(135deg, var(--green), var(--green-dark));
+}
+
+.why-card span {
+  font-family: var(--font-head);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.4;
+}
+
+/* ============ Stats Banner ============ */
+.about-stats-banner {
+  background: var(--navy);
+  padding: 60px 0 70px;
+}
+
+.about-stats-banner .section-heading.light h2 {
+  color: #fff;
+}
+
+.about-stats-banner .section-heading.light .subtitle {
+  background: rgba(249, 115, 22, 0.15);
+  color: var(--saffron-light);
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+.stats-banner-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.stats-banner-card {
+  text-align: center;
+  padding: 28px 16px;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.stats-banner-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.stats-banner-card strong {
+  font-family: var(--font-head);
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.stats-banner-card span {
+  font-size: 0.88rem;
+  color: #94a3b8;
+}
+
+/* ============ CTA ============ */
+.about-cta {
+  background: var(--cream);
+  padding: 60px 0 70px;
+}
+
+.about-cta-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 44px 48px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--saffron), var(--saffron-dark));
+  box-shadow: 0 20px 50px -14px rgba(234, 107, 45, 0.45);
+}
+
+.cta-text h2 {
+  font-family: var(--font-head);
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.cta-text p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 420px;
+}
+
+.cta-btns {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 26px;
+  border-radius: 14px;
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 0.98rem;
+  background: #fff;
+  color: var(--saffron-dark);
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-white:hover {
+  background: transparent;
+  color: #fff;
+}
+
+.btn-white-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 26px;
+  border-radius: 14px;
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 0.98rem;
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-white-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #fff;
+}
+
+/* ============ Responsive ============ */
+@media (max-width: 1080px) {
+  .about-values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats-banner-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-visual {
+    transform: none;
+    margin-bottom: 20px;
+  }
+
+  .about-text .section-heading {
+    text-align: center;
+  }
+
+  .about-text .heading-line {
+    justify-content: center;
+  }
+
+  .about-mv-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-cta-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 36px 28px;
+  }
+
+  .cta-text p { max-width: none; }
+
+  .cta-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-white,
+  .btn-white-outline {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .about-hero {
+    padding: 20px 0 36px;
+  }
+
+  .about-hero-center h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-hero-sub {
+    font-size: 0.92rem;
+  }
+
+  .about-points {
+    grid-template-columns: 1fr;
+  }
+
+  .about-values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .value-card {
+    padding: 22px 16px;
+  }
+
+  .value-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 1.2rem;
+  }
+
+  .value-card h4 {
+    font-size: 0.92rem;
+  }
+
+  .value-card p {
+    font-size: 0.8rem;
+  }
+
+  .stats-banner-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .stats-banner-card {
+    padding: 22px 14px;
+  }
+
+  .stats-banner-card strong {
+    font-size: 1.5rem;
+  }
+
+  .stats-banner-card span {
+    font-size: 0.8rem;
+  }
+
+  .about-cta-card {
+    padding: 28px 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .about-values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-banner-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .stats-banner-card strong {
+    font-size: 1.3rem;
+  }
+
+  .why-card {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .why-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .why-card span {
+    font-size: 0.82rem;
+  }
+}
