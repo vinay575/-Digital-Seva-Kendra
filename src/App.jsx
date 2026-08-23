@@ -20,6 +20,7 @@ import LegalPage from './pages/LegalPage'
 import BlogPage from './pages/BlogPage'
 import BlogDetailPage from './pages/BlogDetailPage'
 import AboutPage from './pages/AboutPage'
+import ContactPage from './pages/ContactPage'
 
 function HomePage({ content }) {
   return (
@@ -63,6 +64,7 @@ export default function App() {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug" element={<BlogDetailPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Footer />
     </div>
