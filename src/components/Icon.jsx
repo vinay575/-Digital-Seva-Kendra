@@ -36,6 +36,7 @@ const ICON_MAP = {
   calendar: 'fa-solid fa-calendar-days',
   clock: 'fa-solid fa-clock',
   user: 'fa-solid fa-user',
+  users: 'fa-solid fa-users',
   tag: 'fa-solid fa-tag'
 }
 
